@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note-body {
+  background-color: #8bff5a;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.note-footer {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darkmode {
+  background-color: black;
+}
+
+.darkmode h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 960px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+.note-body.new {
+  background-color: aqua;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: aqua;
+}
+
+textarea:focus{
+  outline:none;
+}
+
+.note-save{
+  background-color: rgb(197, 197, 197);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+
+}
+
+.note-save:hover{
+  background-color: #e2e0e0;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+
+}
+
+.input {
+  border: none;
+  background-color: lightgrey;
+}
+
+.input:focus {
+  outline: none;
 }
